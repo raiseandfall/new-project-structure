@@ -1,0 +1,50 @@
+{
+  "name": "new-project-structure",
+  "version": "0.0.0",
+  "description": "A simple CL tool to create a project structure",
+  "main": "index.js",
+  "scripts": {
+    "hint": "jshint --reporter node_modules/jshint-stylish/stylish.js index.js",
+    "dev": "npm run watch",
+    "test": "mocha tests.js",
+    "watch": "watchify *.js -o 'npm run hint && npm run test'",
+    "build:js": "npm run hint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raiseandfall/new-project-structure.git"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "bin": {
+    "new": "cli.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "project",
+    "structure",
+    "initialization",
+    "init"
+  ],
+  "author": {
+    "name": "Matthieu COLLE",
+    "url": "https://github.com/raiseandfall"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raiseandfall/new-project-structure/issues"
+  },
+  "homepage": "https://github.com/raiseandfall/new-project-structure#readme",
+  "devDependencies": {
+    "fs-extra": "^0.18.2",
+    "jshint": "^2.6.3",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "*",
+    "path-exists": "^1.0.0",
+    "watchify": "^3.1.0"
+  }
+}
